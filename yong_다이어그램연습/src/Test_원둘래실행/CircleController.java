@@ -7,7 +7,11 @@ public class CircleController {
 	//받은 매개변수를 이용하여 필드들을 초기화하고 초기화한 정보와 면적 반환
 	// 면적 : PI * 반지름 * 반지름
 	public String calcArea(int x, int y, int radius) {
-		return null;
+		x = x;
+		y= y;
+		radius = radius;
+		
+		return "둘레 : " + x + ", " + y + ", " + radius + " / " + (Math.PI * radius * radius);
 		
 	}
 	
