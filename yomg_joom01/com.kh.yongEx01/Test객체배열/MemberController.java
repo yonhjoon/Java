@@ -1,9 +1,5 @@
 package Test객체배열;
 
-import com.kh.service.MemberService;
-import com.kh.stydy2400225.Member;
-import com.kh.view.MemberMenu;
-
 public class MemberController {
 
 	private Test객체배열.Member[] m = new Member[SIZE];
@@ -13,8 +9,7 @@ public class MemberController {
 		//우리는 정보를 가지고 멤버를 추가
 		//멤버객체 1개 만들고 데이터는 넘겨받은 것들로 세팅
 		// 그 다음 객체배열 m에 null인 공간을 찾아서 넣어주기
-		
-		MemberController mc = new MemberMenu().inputMember();
+
 		
 		int count =0;//3
 		
