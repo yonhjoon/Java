@@ -3,6 +3,7 @@ package com.kh.view;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.kh.Controller.MemberController;
 import com.kh.model.vo.Member;
 
 public class MemberMenu {
@@ -37,7 +38,7 @@ public class MemberMenu {
 				this.inputMember();
 				break;
 			case 2:
-				
+				mc.selectList(); // 회원정보 내놔 -> controller에 요청
 				break;
 			case 3:
 				
@@ -75,6 +76,9 @@ public class MemberMenu {
 		
 		System.out.println("발행일");
 		String date = sc.next();
+		
+		// 회원 추가 요쳥 == Controller메소드 요청
+		mc.insertMember(name, author, publisher, date);
 	}
 	
 	public void updateMember() {
@@ -82,7 +86,7 @@ public class MemberMenu {
 	}
 	
 	public void inputMemberId() {
-		
+	
 	}
 	
 	public void displaySuccess(String message) {
@@ -97,13 +101,20 @@ public class MemberMenu {
 		
 	}
 	
+	/**
+	 * 조회서비스 요청시 결과가 여러행일 경우 보게될 응답화면
+	 * @param list: 조회결과
+	 */
 	public void displayMemberList(ArrayList<Member> list) {
-		
+		for(Member m : list) {
+			System.out.println(m);
+		}
 	}
 	
 	public void displayMember(Member m) {
 		
 	}
+	
 	
 	
 	

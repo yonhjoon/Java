@@ -23,7 +23,13 @@ public class MemberDao {
 		
 		int result = 0;
 		
-		PreparedStatement pstmt = null;
+		PreparedStatement pstmt = null; //PreparedStatement :  Statement 대신 PreparedStatement 쓰는이유는
+										//						''를 일일이 넣어줬어야해서 오타나기쉽고 작성하는시간이 오래걸렸는데
+										//                      PreparedStatement 를 쓰면 ''을 일일이안쓰더라도 인식을하여 그렇다 그안에 값을 
+										//						?,?,? 안에 넣어줌으로 insert into안에있는 값에 맞춰 넣어야한다 예시는 밑에있다.
+										// Statement : (PreparedStatement의 부모관계)Statement 대신 ?가 아니라 ''를 일일이 넣어줬어야하는데
+										//             PreparedStatement
+												
 		String sql = "INSERT INTO MEMBER VALUES(SEQ_USERNO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE)";
 		
 		try {
