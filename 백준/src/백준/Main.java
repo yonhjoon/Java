@@ -22,7 +22,7 @@ public class Main {
 			for(int j = 0; j < num.length; j++) { //2번째 카드 반복
 				for(int m = 0; m < num.length; m++) { //3번째 카드 반복
 					C = (i+j+m);
-					if(C <= B) {
+					if(C <= B ) {
 						D = C;
 					}
 					System.out.println(D);
