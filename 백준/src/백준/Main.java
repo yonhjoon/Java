@@ -8,12 +8,19 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int A = sc.nextInt();
-		int Long = A /4;
+		int N = sc.nextInt();
 		
-		for(int i = 0; i < Long; i++) {
-			System.out.print("long ");
-		}      
-		System.out.println("int");
+		
+		
+		int[] num = new int[N];
+		
+		for(int i = 0; i < A; i++) {
+			num[i] = sc.nextInt();
+			
+			
+		}
+
+		
 		                        
 		
 	}
